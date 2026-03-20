@@ -22,15 +22,14 @@ As a portfolio project, this repository demonstrates proficiency in modern syste
 * **Industry Standard Build:** Configured with modern **CMake** for cross-platform compilation and easy integration into CI/CD pipelines. Optimized out-of-the-box with `-O3` flags.
 
 ## 📊 Benchmarks (Python vs C++)
-*Tests performed on a generated dataset of 10,000,000 rows (~250 MB).*
+*Tests performed locally on a generated dataset of 10,000,000 rows (~200 MB).*
 
 | Language/Method | Execution Time | Peak RAM Usage |
 | :--- | :--- | :--- |
-| **Python (Pandas)** | ~12.5 seconds | ~800 MB |
-| **Python (Standard CSV)** | ~18.2 seconds | ~50 MB |
-| **C++17 (This Engine)** | **~1.2 seconds** | **< 5 MB** |
+| **Python (Standard CSV)** | ~25.0 seconds | ~50 MB |
+| **C++17 (This Engine)** | **~4.9 seconds** | **< 5 MB** |
 
-*(Note: Benchmark times may vary based on CPU and disk read speeds).*
+*(Note: The C++ implementation parses and aggregates ~2 million rows per second utilizing standard I/O streams and `std::unordered_map` for O(1) lookups).*
 
 ## 🚀 Getting Started
 
